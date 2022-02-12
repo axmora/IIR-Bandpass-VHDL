@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "/home/alexis/Documents/ISE/TesisBPFwI2S/TopDriver.xst" -ofn "/home/alexis/Documents/ISE/TesisBPFwI2S/TopDriver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGApinout.ucf -p xc6slx9-tqg144-2 TopDriver.ngc TopDriver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TopDriver_map.ncd TopDriver.ngd TopDriver.pcf 
+par -w -intstyle ise -ol high -mt off TopDriver_map.ncd TopDriver.ncd TopDriver.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml TopDriver.twx TopDriver.ncd -o TopDriver.twr TopDriver.pcf -ucf FPGApinout.ucf 
+bitgen -intstyle ise -f TopDriver.ut TopDriver.ncd 
+bitgen -intstyle ise -f TopDriver.ut TopDriver.ncd 

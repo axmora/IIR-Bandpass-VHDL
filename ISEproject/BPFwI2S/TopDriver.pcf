@@ -1,0 +1,21 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Feb 03 15:24:04 2022
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Clk" LOCATE = SITE "P56" LEVEL 1;
+COMP "Reset_N" LOCATE = SITE "P38" LEVEL 1;
+COMP "ADC_SD" LOCATE = SITE "P2" LEVEL 1;
+COMP "DAC_SD" LOCATE = SITE "P12" LEVEL 1;
+COMP "ADC_MCLK" LOCATE = SITE "P24" LEVEL 1;
+COMP "ADC_LRCK" LOCATE = SITE "P27" LEVEL 1;
+COMP "ADC_SCLK" LOCATE = SITE "P6" LEVEL 1;
+COMP "DAC_MCLK" LOCATE = SITE "P22" LEVEL 1;
+COMP "DAC_LRCK" LOCATE = SITE "P17" LEVEL 1;
+COMP "DAC_SCLK" LOCATE = SITE "P15" LEVEL 1;
+TIMEGRP Clk = BEL "ADC_MCLK_int" BEL "BPF_Start_cnt_0" BEL "BPF_Start_cnt_1"
+        BEL "EN_I2S_DAC" BEL "DAC_MCLK_int" BEL "BPF_Clk" BEL "BPF_L_S_aux"
+        BEL "BPF_R_S_aux" BEL "BPF_Clk_cnt_0" BEL "Clk_BUFGP/BUFG";
+TS_Clk = PERIOD TIMEGRP "Clk" 50 MHz HIGH 50%;
+SCHEMATIC END;
+

@@ -1,0 +1,8 @@
+vhdl work "SingleAddProduct.vhd"
+vhdl work "I2Stransmitter.vhd"
+vhdl work "I2Sreceiver.vhd"
+vhdl work "Float2Fixed.vhd"
+vhdl work "Fixed2Float.vhd"
+vhdl work "BPF2channels.vhd"
+vhdl work "TopDriver.vhd"
+vhdl work "I2Sdtb.vhd"

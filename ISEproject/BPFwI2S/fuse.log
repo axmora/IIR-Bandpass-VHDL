@@ -1,0 +1,40 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/alexis/Documents/ISE/TesisBPFwI2S/I2Sdtb_isim_beh.exe -prj /home/alexis/Documents/ISE/TesisBPFwI2S/I2Sdtb_beh.prj work.I2Sdtb 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 12
+Turning on mult-threading, number of parallel sub-compilation jobs: 24 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/alexis/Documents/ISE/TesisBPFwI2S/SingleAddProduct.vhd" into library work
+Parsing VHDL file "/home/alexis/Documents/ISE/TesisBPFwI2S/I2Stransmitter.vhd" into library work
+Parsing VHDL file "/home/alexis/Documents/ISE/TesisBPFwI2S/I2Sreceiver.vhd" into library work
+Parsing VHDL file "/home/alexis/Documents/ISE/TesisBPFwI2S/Float2Fixed.vhd" into library work
+Parsing VHDL file "/home/alexis/Documents/ISE/TesisBPFwI2S/Fixed2Float.vhd" into library work
+Parsing VHDL file "/home/alexis/Documents/ISE/TesisBPFwI2S/BPF2channels.vhd" into library work
+Parsing VHDL file "/home/alexis/Documents/ISE/TesisBPFwI2S/TopDriver.vhd" into library work
+Parsing VHDL file "/home/alexis/Documents/ISE/TesisBPFwI2S/I2Sdtb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 92332 KB
+Fuse CPU Usage: 470 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package fixed_float_types
+Compiling package textio
+Compiling package math_real
+Compiling package fixed_pkg
+Compiling package float_pkg
+Compiling architecture logic of entity I2Sreceiver [\I2Sreceiver(4,64,24)\]
+Compiling architecture logic of entity I2Stransmitter [\I2Stransmitter(4,64,24)\]
+Compiling architecture logic of entity Fixed2Float [\Fixed2Float(24,32)\]
+Compiling architecture logic of entity SingleAddProduct [\SingleAddProduct(32)\]
+Compiling architecture logic of entity BPF2channels [\BPF2channels(32)\]
+Compiling architecture logic of entity Float2Fixed [\Float2Fixed(32,24)\]
+Compiling architecture logic of entity TopDriver [\TopDriver(24,32,4)\]
+Compiling architecture behavior of entity i2sdtb
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 23 VHDL Units
+Built simulation executable /home/alexis/Documents/ISE/TesisBPFwI2S/I2Sdtb_isim_beh.exe
+Fuse Memory Usage: 1737604 KB
+Fuse CPU Usage: 760 ms
+GCC CPU Usage: 5950 ms

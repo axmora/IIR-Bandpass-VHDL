@@ -1,0 +1,19 @@
+# Editted from mojo-base-project from Embedded Micro - Github
+# Source: https://github.com/embmicro
+
+# Created by Constraints Editor (xc6slx9-tqg144-3) - 2012/11/05
+NET "Clk" TNM_NET = Clk;
+TIMESPEC TS_Clk = PERIOD "Clk" 50 MHz HIGH 50%;
+
+# PlanAhead Generated physical constraints 
+NET "Clk" LOC = P56 | IOSTANDARD = LVTTL;
+NET "Reset_N" LOC = P38 | IOSTANDARD = LVTTL;
+
+NET "ADC_MCLK" LOC = P24 | IOSTANDARD = LVTTL;
+NET "ADC_LRCK" LOC = P27 | IOSTANDARD = LVTTL;
+NET "ADC_SCLK" LOC = P6 | IOSTANDARD = LVTTL;
+NET "ADC_SD" LOC = P2 | IOSTANDARD = LVTTL;
+NET "DAC_MCLK" LOC = P22 | IOSTANDARD = LVTTL;
+NET "DAC_LRCK" LOC = P17 | IOSTANDARD = LVTTL;
+NET "DAC_SCLK" LOC = P15 | IOSTANDARD = LVTTL;
+NET "DAC_SD" LOC = P12 | IOSTANDARD = LVTTL;

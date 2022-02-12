@@ -1,0 +1,1402 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Reading design: TopDriver.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TopDriver.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TopDriver"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-tqg144
+
+---- Source Options
+Top Module Name                    : TopDriver
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/alexis/Documents/ISE/TesisBPFwI2S/SingleAddProduct.vhd" into library work
+Parsing entity <SingleAddProduct>.
+Parsing architecture <Logic> of entity <singleaddproduct>.
+Parsing VHDL file "/home/alexis/Documents/ISE/TesisBPFwI2S/I2Stransmitter.vhd" into library work
+Parsing entity <I2Stransmitter>.
+Parsing architecture <Logic> of entity <i2stransmitter>.
+Parsing VHDL file "/home/alexis/Documents/ISE/TesisBPFwI2S/I2Sreceiver.vhd" into library work
+Parsing entity <I2Sreceiver>.
+Parsing architecture <Logic> of entity <i2sreceiver>.
+Parsing VHDL file "/home/alexis/Documents/ISE/TesisBPFwI2S/Float2Fixed.vhd" into library work
+Parsing entity <Float2Fixed>.
+Parsing architecture <Logic> of entity <float2fixed>.
+Parsing VHDL file "/home/alexis/Documents/ISE/TesisBPFwI2S/Fixed2Float.vhd" into library work
+Parsing entity <Fixed2Float>.
+Parsing architecture <Logic> of entity <fixed2float>.
+Parsing VHDL file "/home/alexis/Documents/ISE/TesisBPFwI2S/BPF2channels.vhd" into library work
+Parsing entity <BPF2channels>.
+Parsing architecture <Logic> of entity <bpf2channels>.
+Parsing VHDL file "/home/alexis/Documents/ISE/TesisBPFwI2S/TopDriver.vhd" into library work
+Parsing entity <TopDriver>.
+Parsing architecture <Logic> of entity <topdriver>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <TopDriver> (architecture <Logic>) with generics from library <work>.
+
+Elaborating entity <I2Sreceiver> (architecture <Logic>) with generics from library <work>.
+
+Elaborating entity <I2Stransmitter> (architecture <Logic>) with generics from library <work>.
+WARNING:HDLCompiler:746 - "/build/xfndry10/P.20131013/rtf/vhdl/src/ieee_proposed/fixed_pkg_c.vhd" Line 1470: Range is empty (null range)
+WARNING:HDLCompiler:746 - "/build/xfndry10/P.20131013/rtf/vhdl/src/ieee_proposed/fixed_pkg_c.vhd" Line 1471: Range is empty (null range)
+WARNING:HDLCompiler:746 - "/build/xfndry10/P.20131013/rtf/vhdl/src/ieee_proposed/fixed_pkg_c.vhd" Line 1472: Range is empty (null range)
+WARNING:HDLCompiler:746 - "/build/xfndry10/P.20131013/rtf/vhdl/src/ieee_proposed/float_pkg_c.vhd" Line 1021: Range is empty (null range)
+WARNING:HDLCompiler:746 - "/build/xfndry10/P.20131013/rtf/vhdl/src/ieee_proposed/float_pkg_c.vhd" Line 1022: Range is empty (null range)
+
+Elaborating entity <Fixed2Float> (architecture <Logic>) with generics from library <work>.
+WARNING:HDLCompiler:314 - "/build/xfndry10/P.20131013/rtf/vhdl/xst/src/std_1164.vhd" Line 1025: Choice with meta-value 'U' is ignored for synthesis
+
+Elaborating entity <BPF2channels> (architecture <Logic>) with generics from library <work>.
+INFO:HDLCompiler:679 - "/home/alexis/Documents/ISE/TesisBPFwI2S/BPF2channels.vhd" Line 805. Case statement is complete. others clause is never selected
+
+Elaborating entity <SingleAddProduct> (architecture <Logic>) with generics from library <work>.
+
+Elaborating entity <Float2Fixed> (architecture <Logic>) with generics from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <TopDriver>.
+    Related source file is "/home/alexis/Documents/ISE/TesisBPFwI2S/TopDriver.vhd".
+        fixed_width = 24
+        float_width = 32
+        CLK_BPF_ratio = 4
+INFO:Xst:3210 - "/home/alexis/Documents/ISE/TesisBPFwI2S/TopDriver.vhd" line 224: Output port <Ldone> of the instance <I2SDAC> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/alexis/Documents/ISE/TesisBPFwI2S/TopDriver.vhd" line 224: Output port <Rdone> of the instance <I2SDAC> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <DAC_MCLK_int>.
+    Found 1-bit register for signal <EN_I2S_DAC>.
+    Found 1-bit register for signal <ADC_MCLK_int>.
+    Found 1-bit register for signal <BPF_Clk_cnt>.
+    Found 1-bit register for signal <BPF_Clk>.
+    Found 1-bit register for signal <BPF_L_S_aux>.
+    Found 2-bit register for signal <BPF_Start_cnt>.
+    Found 1-bit register for signal <BPF_R_S_aux>.
+    Found 1-bit adder for signal <BPF_Clk_cnt[0]_PWR_4_o_add_1_OUT<0>> created at line 1241.
+    Found 2-bit adder for signal <BPF_Start_cnt[1]_GND_4_o_add_3_OUT> created at line 1241.
+    Found 1-bit comparator greater for signal <BPF_Clk_cnt[0]_PWR_4_o_LessThan_1_o> created at line 172
+    Found 2-bit comparator greater for signal <BPF_Start_cnt[1]_PWR_4_o_LessThan_3_o> created at line 185
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   9 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <TopDriver> synthesized.
+
+Synthesizing Unit <I2Sreceiver>.
+    Related source file is "/home/alexis/Documents/ISE/TesisBPFwI2S/I2Sreceiver.vhd".
+        MCLK_SCLK_ratio = 4
+        SCLK_LRCK_ratio = 64
+        data_width = 24
+    Found 1-bit register for signal <SCLK_int>.
+    Found 1-bit register for signal <SCLK_cnt>.
+    Found 1-bit register for signal <Ldone>.
+    Found 1-bit register for signal <Rdone>.
+    Found 1-bit register for signal <LRCK_int>.
+    Found 24-bit register for signal <L_DATA>.
+    Found 24-bit register for signal <R_DATA>.
+    Found 24-bit register for signal <DATA_int>.
+    Found 6-bit register for signal <LRCK_cnt>.
+    Found 1-bit adder for signal <SCLK_cnt[0]_PWR_5_o_add_1_OUT<0>> created at line 1241.
+    Found 6-bit adder for signal <LRCK_cnt[5]_GND_5_o_add_3_OUT> created at line 1241.
+    Found 1-bit comparator greater for signal <SCLK_cnt[0]_PWR_5_o_LessThan_1_o> created at line 85
+    Found 6-bit comparator greater for signal <LRCK_cnt[5]_PWR_5_o_LessThan_3_o> created at line 93
+    Found 6-bit comparator greater for signal <GND_5_o_LRCK_cnt[5]_LessThan_5_o> created at line 97
+    Found 6-bit comparator greater for signal <LRCK_cnt[5]_PWR_5_o_LessThan_6_o> created at line 97
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  83 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred  11 Multiplexer(s).
+Unit <I2Sreceiver> synthesized.
+
+Synthesizing Unit <I2Stransmitter>.
+    Related source file is "/home/alexis/Documents/ISE/TesisBPFwI2S/I2Stransmitter.vhd".
+        MCLK_SCLK_ratio = 4
+        SCLK_LRCK_ratio = 64
+        data_width = 24
+    Found 1-bit register for signal <SCLK_int>.
+    Found 1-bit register for signal <SDTX>.
+    Found 1-bit register for signal <SCLK_cnt>.
+    Found 1-bit register for signal <Ldone>.
+    Found 1-bit register for signal <Rdone>.
+    Found 1-bit register for signal <LRCK_int>.
+    Found 24-bit register for signal <DATA_int>.
+    Found 6-bit register for signal <LRCK_cnt>.
+    Found 1-bit adder for signal <SCLK_cnt[0]_PWR_6_o_add_1_OUT<0>> created at line 1241.
+    Found 6-bit adder for signal <LRCK_cnt[5]_GND_6_o_add_3_OUT> created at line 1241.
+    Found 1-bit comparator greater for signal <SCLK_cnt[0]_PWR_6_o_LessThan_1_o> created at line 84
+    Found 6-bit comparator greater for signal <LRCK_cnt[5]_PWR_6_o_LessThan_3_o> created at line 92
+    Found 6-bit comparator greater for signal <LRCK_cnt[5]_PWR_6_o_LessThan_5_o> created at line 95
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  36 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred  12 Multiplexer(s).
+Unit <I2Stransmitter> synthesized.
+
+Synthesizing Unit <Fixed2Float>.
+    Related source file is "/home/alexis/Documents/ISE/TesisBPFwI2S/Fixed2Float.vhd".
+        fixed_width = 24
+        float_width = 32
+    Found 11-bit subtractor for signal <n0104> created at line 1320.
+    Found 24-bit adder for signal <Fixed_int[23]_GND_12_o_add_3_OUT> created at line 1241.
+    Found 10-bit subtractor for signal <GND_12_o_PWR_12_o_sub_35_OUT<9:0>> created at line 4106.
+    Found 24-bit shifter logical left for signal <n0100> created at line 2955
+    Found 10-bit comparator greater for signal <PWR_12_o_GND_12_o_LessThan_32_o> created at line 4074
+    Found 10-bit comparator lessequal for signal <n0054> created at line 4079
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred  30 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <Fixed2Float> synthesized.
+
+Synthesizing Unit <BPF2channels>.
+    Related source file is "/home/alexis/Documents/ISE/TesisBPFwI2S/BPF2channels.vhd".
+        float_width = 32
+    Found 1-bit register for signal <Ldone>.
+    Found 1-bit register for signal <Rdone>.
+    Found 32-bit register for signal <L_Yk>.
+    Found 32-bit register for signal <L_rkd0>.
+    Found 32-bit register for signal <L_rkd1>.
+    Found 32-bit register for signal <L_rkd2>.
+    Found 32-bit register for signal <L_wkd0>.
+    Found 32-bit register for signal <L_wkd1>.
+    Found 32-bit register for signal <L_wkd2>.
+    Found 32-bit register for signal <L_pkd0>.
+    Found 32-bit register for signal <L_pkd1>.
+    Found 32-bit register for signal <L_pkd2>.
+    Found 32-bit register for signal <L_qkd0>.
+    Found 32-bit register for signal <L_qkd1>.
+    Found 32-bit register for signal <L_qkd2>.
+    Found 32-bit register for signal <L_skd0>.
+    Found 32-bit register for signal <L_skd1>.
+    Found 32-bit register for signal <L_skd2>.
+    Found 32-bit register for signal <L_tkd0>.
+    Found 32-bit register for signal <L_tkd1>.
+    Found 32-bit register for signal <L_tkd2>.
+    Found 32-bit register for signal <L_ukd0>.
+    Found 32-bit register for signal <L_ukd1>.
+    Found 32-bit register for signal <L_ukd2>.
+    Found 32-bit register for signal <L_vkd0>.
+    Found 32-bit register for signal <L_vkd1>.
+    Found 32-bit register for signal <L_vkd2>.
+    Found 32-bit register for signal <L_ykd0>.
+    Found 32-bit register for signal <L_ykd1>.
+    Found 32-bit register for signal <L_ykd2>.
+    Found 32-bit register for signal <R_Yk>.
+    Found 32-bit register for signal <R_rkd0>.
+    Found 32-bit register for signal <R_rkd1>.
+    Found 32-bit register for signal <R_rkd2>.
+    Found 32-bit register for signal <R_wkd0>.
+    Found 32-bit register for signal <R_wkd1>.
+    Found 32-bit register for signal <R_wkd2>.
+    Found 32-bit register for signal <R_pkd0>.
+    Found 32-bit register for signal <R_pkd1>.
+    Found 32-bit register for signal <R_pkd2>.
+    Found 32-bit register for signal <R_qkd0>.
+    Found 32-bit register for signal <R_qkd1>.
+    Found 32-bit register for signal <R_qkd2>.
+    Found 32-bit register for signal <R_skd0>.
+    Found 32-bit register for signal <R_skd1>.
+    Found 32-bit register for signal <R_skd2>.
+    Found 32-bit register for signal <R_tkd0>.
+    Found 32-bit register for signal <R_tkd1>.
+    Found 32-bit register for signal <R_tkd2>.
+    Found 32-bit register for signal <R_ukd0>.
+    Found 32-bit register for signal <R_ukd1>.
+    Found 32-bit register for signal <R_ukd2>.
+    Found 32-bit register for signal <R_vkd0>.
+    Found 32-bit register for signal <R_vkd1>.
+    Found 32-bit register for signal <R_vkd2>.
+    Found 32-bit register for signal <R_ykd0>.
+    Found 32-bit register for signal <R_ykd1>.
+    Found 32-bit register for signal <R_ykd2>.
+    Found 7-bit register for signal <T>.
+    Found 32-bit register for signal <N1>.
+    Found 32-bit register for signal <N2>.
+    Found 32-bit register for signal <N3>.
+    Found finite state machine <FSM_0> for signal <T>.
+    -----------------------------------------------------------------------
+    | States             | 69                                             |
+    | Transitions        | 71                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 40                                             |
+    | Clock              | Clk (rising_edge)                              |
+    | Reset              | Reset_N (negative)                             |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | ta                                             |
+    | Power Up State     | ta                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred 1890 D-type flip-flop(s).
+	inferred 110 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <BPF2channels> synthesized.
+
+Synthesizing Unit <SingleAddProduct>.
+    Related source file is "/home/alexis/Documents/ISE/TesisBPFwI2S/SingleAddProduct.vhd".
+        float_width = 32
+    Found 7-bit subtractor for signal <GND_15_o_PWR_15_o_sub_102_OUT> created at line 2123.
+    Found 7-bit subtractor for signal <GND_15_o_PWR_15_o_sub_130_OUT> created at line 2126.
+    Found 7-bit subtractor for signal <PWR_15_o_GND_15_o_sub_169_OUT> created at line 1597.
+    Found 8-bit subtractor for signal <PWR_15_o_GND_15_o_sub_170_OUT> created at line 1597.
+    Found 11-bit subtractor for signal <GND_15_o_unary_minus_176_OUT> created at line 1607.
+    Found 10-bit subtractor for signal <n1251> created at line 1956.
+    Found 10-bit subtractor for signal <n1252> created at line 1964.
+    Found 7-bit subtractor for signal <PWR_15_o_GND_15_o_sub_472_OUT> created at line 1597.
+    Found 8-bit subtractor for signal <PWR_15_o_GND_15_o_sub_473_OUT> created at line 1597.
+    Found 10-bit subtractor for signal <X_14_o_unary_minus_479_OUT> created at line 1607.
+    Found 11-bit subtractor for signal <n1428> created at line 1621.
+    Found 10-bit subtractor for signal <n1432> created at line 1621.
+    Found 10-bit adder for signal <GND_15_o_GND_15_o_add_136_OUT> created at line 2134.
+    Found 10-bit adder for signal <n1441> created at line 1253.
+    Found 10-bit adder for signal <GND_15_o_PWR_15_o_add_170_OUT> created at line 1253.
+    Found 10-bit adder for signal <GND_15_o_GND_15_o_add_174_OUT> created at line 1607.
+    Found 10-bit adder for signal <GND_15_o_GND_15_o_add_215_OUT> created at line 1253.
+    Found 23-bit adder for signal <GND_15_o_GND_15_o_add_216_OUT> created at line 1241.
+    Found 28-bit adder for signal <X_14_o_X_14_o_add_440_OUT> created at line 2000.
+    Found 10-bit adder for signal <X_14_o_PWR_15_o_add_473_OUT> created at line 1253.
+    Found 9-bit adder for signal <X_14_o_GND_15_o_add_477_OUT> created at line 1607.
+    Found 10-bit adder for signal <X_14_o_GND_15_o_add_518_OUT> created at line 1253.
+    Found 23-bit adder for signal <GND_15_o_GND_15_o_add_519_OUT> created at line 1241.
+    Found 10-bit subtractor for signal <n1439> created at line 0.
+    Found 11-bit subtractor for signal <PWR_15_o_GND_15_o_sub_186_OUT<10:0>> created at line 1624.
+    Found 28-bit subtractor for signal <GND_15_o_GND_15_o_sub_442_OUT<27:0>> created at line 2003.
+    Found 10-bit subtractor for signal <PWR_15_o_GND_15_o_sub_489_OUT<9:0>> created at line 1624.
+    Found 24-bit shifter logical left for signal <GND_15_o_GND_15_o_shift_left_102_OUT> created at line 2955
+    Found 24-bit shifter logical left for signal <GND_15_o_GND_15_o_shift_left_130_OUT> created at line 2955
+    Found 24x24-bit multiplier for signal <GND_15_o_GND_15_o_MuLt_139_OUT> created at line 2135.
+    Found 28-bit shifter logical right for signal <n1430> created at line 1621
+    Found 28-bit shifter logical right for signal <GND_15_o_GND_15_o_shift_right_357_OUT> created at line 2964
+    Found 28-bit shifter logical right for signal <X_14_o_GND_15_o_mux_433_OUT> created at line 1957
+    Found 28-bit shifter logical right for signal <n1434> created at line 1621
+    Found 28-bit shifter logical left for signal <n1429> created at line 1621
+    Found 28-bit shifter logical left for signal <n1433> created at line 1621
+    Found 1-bit 28-to-1 multiplexer for signal <PWR_15_o_X_14_o_Mux_186_o> created at line 1537.
+    Found 1-bit 27-to-1 multiplexer for signal <GND_15_o_X_14_o_Mux_358_o> created at line 1537.
+    Found 1-bit 27-to-1 multiplexer for signal <GND_15_o_X_14_o_Mux_394_o> created at line 1537.
+    Found 1-bit 28-to-1 multiplexer for signal <PWR_15_o_X_14_o_Mux_489_o> created at line 1537.
+    Found 10-bit comparator lessequal for signal <n0353> created at line 1602
+    Found 10-bit comparator greater for signal <GND_15_o_INV_107_o> created at line 1604
+    Found 10-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_179_o> created at line 1611
+    Found 11-bit comparator greater for signal <PWR_15_o_GND_15_o_LessThan_185_o> created at line 1622
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_188_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_189_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_190_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_191_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_192_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_193_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_194_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_195_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_196_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_197_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_198_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_199_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_200_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_201_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_202_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_203_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_204_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_205_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_206_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_207_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_208_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_209_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_210_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_211_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_212_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_213_o> created at line 1539
+    Found 11-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_214_o> created at line 1539
+    Found 9-bit comparator greater for signal <PWR_15_o_GND_15_o_LessThan_355_o> created at line 1957
+    Found 9-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_356_o> created at line 1963
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_361_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_362_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_363_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_364_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_365_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_366_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_367_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_368_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_369_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_370_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_371_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_372_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_373_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_374_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_375_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_376_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_377_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_378_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_379_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_380_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_381_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_382_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_383_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_384_o> created at line 1539
+    Found 27-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_389_o> created at line 1974
+    Found 9-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_392_o> created at line 1983
+    Found 9-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_393_o> created at line 1989
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_397_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_398_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_399_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_400_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_401_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_402_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_403_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_404_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_405_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_406_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_407_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_408_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_409_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_410_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_411_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_412_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_413_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_414_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_415_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_416_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_417_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_418_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_419_o> created at line 1539
+    Found 8-bit comparator greater for signal <GND_15_o_GND_15_o_LessThan_420_o> created at line 1539
+    Found 10-bit comparator lessequal for signal <n0940> created at line 1602
+    Found 10-bit comparator greater for signal <X_14_o_INV_200_o> created at line 1604
+    Found 10-bit comparator greater for signal <X_14_o_GND_15_o_LessThan_482_o> created at line 1611
+    Found 10-bit comparator greater for signal <PWR_15_o_GND_15_o_LessThan_488_o> created at line 1622
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_491_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_492_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_493_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_494_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_495_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_496_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_497_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_498_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_499_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_500_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_501_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_502_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_503_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_504_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_505_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_506_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_507_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_508_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_509_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_510_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_511_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_512_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_513_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_514_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_515_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_516_o> created at line 1539
+    Found 10-bit comparator greater for signal <GND_15_o_PWR_15_o_LessThan_517_o> created at line 1539
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred  26 Adder/Subtractor(s).
+	inferred 115 Comparator(s).
+	inferred 308 Multiplexer(s).
+	inferred   8 Combinational logic shifter(s).
+Unit <SingleAddProduct> synthesized.
+
+Synthesizing Unit <Float2Fixed>.
+    Related source file is "/home/alexis/Documents/ISE/TesisBPFwI2S/Float2Fixed.vhd".
+        float_width = 32
+        fixed_width = 24
+    Found 10-bit subtractor for signal <GND_21_o_BUS_0001_sub_17_OUT> created at line 4561.
+    Found 10-bit subtractor for signal <n0134> created at line 4569.
+    Found 9-bit adder for signal <n0139> created at line 4558.
+    Found 25-bit adder for signal <GND_21_o_GND_21_o_add_22_OUT> created at line 1253.
+    Found 27-bit subtractor for signal <GND_21_o_unary_minus_21_OUT<26:0>> created at line 0.
+    Found 26-bit shifter logical right for signal <n0136> created at line 4569
+    Found 26-bit shifter logical left for signal <n0135> created at line 4569
+    Found 10-bit comparator greater for signal <GND_21_o_GND_21_o_LessThan_19_o> created at line 4570
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred  25 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <Float2Fixed> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 24x24-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 48
+ 1-bit adder                                           : 3
+ 10-bit adder                                          : 7
+ 10-bit subtractor                                     : 12
+ 11-bit subtractor                                     : 5
+ 2-bit adder                                           : 1
+ 23-bit adder                                          : 2
+ 24-bit adder                                          : 2
+ 25-bit adder                                          : 2
+ 27-bit subtractor                                     : 2
+ 28-bit addsub                                         : 1
+ 6-bit adder                                           : 2
+ 7-bit subtractor                                      : 4
+ 8-bit subtractor                                      : 2
+ 9-bit adder                                           : 3
+# Registers                                            : 86
+ 1-bit register                                        : 20
+ 2-bit register                                        : 1
+ 24-bit register                                       : 4
+ 32-bit register                                       : 59
+ 6-bit register                                        : 2
+# Comparators                                          : 130
+ 1-bit comparator greater                              : 3
+ 10-bit comparator greater                             : 36
+ 10-bit comparator lessequal                           : 4
+ 11-bit comparator greater                             : 28
+ 2-bit comparator greater                              : 1
+ 27-bit comparator greater                             : 1
+ 6-bit comparator greater                              : 5
+ 8-bit comparator greater                              : 48
+ 9-bit comparator greater                              : 4
+# Multiplexers                                         : 552
+ 1-bit 2-to-1 multiplexer                              : 151
+ 1-bit 27-to-1 multiplexer                             : 2
+ 1-bit 28-to-1 multiplexer                             : 2
+ 10-bit 2-to-1 multiplexer                             : 15
+ 11-bit 2-to-1 multiplexer                             : 3
+ 2-bit 2-to-1 multiplexer                              : 1
+ 23-bit 2-to-1 multiplexer                             : 6
+ 24-bit 2-to-1 multiplexer                             : 38
+ 26-bit 2-to-1 multiplexer                             : 8
+ 27-bit 2-to-1 multiplexer                             : 2
+ 28-bit 2-to-1 multiplexer                             : 17
+ 32-bit 2-to-1 multiplexer                             : 125
+ 4-bit 2-to-1 multiplexer                              : 24
+ 5-bit 2-to-1 multiplexer                              : 140
+ 6-bit 2-to-1 multiplexer                              : 8
+ 7-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 4
+ 9-bit 2-to-1 multiplexer                              : 4
+# Logic shifters                                       : 14
+ 24-bit shifter logical left                           : 4
+ 26-bit shifter logical left                           : 2
+ 26-bit shifter logical right                          : 2
+ 28-bit shifter logical left                           : 2
+ 28-bit shifter logical right                          : 4
+# FSMs                                                 : 1
+# Xors                                                 : 6
+ 1-bit xor2                                            : 6
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <L_Yk_18> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_18> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_23> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_23> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_19> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_19> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_24> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_24> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_25> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_25> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_30> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_30> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_26> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_26> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_31> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_31> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_27> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_27> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_28> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_28> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_29> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_29> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_0> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_0> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_1> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_1> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_2> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_2> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_3> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_3> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_4> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_4> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_5> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_5> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_6> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_6> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_7> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_7> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_8> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_8> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_9> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_9> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_10> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_10> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_11> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_11> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_12> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_12> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_13> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_13> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_14> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_14> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_15> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_15> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_20> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_20> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_16> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_16> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_21> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_21> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_17> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_17> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_22> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_22> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_18> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_18> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_23> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_23> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_19> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_19> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_24> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_24> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_25> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_25> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_30> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_30> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_26> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_26> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_31> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_31> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_27> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_27> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_28> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_28> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_0> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_0> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_29> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_29> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_1> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_1> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_2> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_2> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_3> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_3> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_4> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_4> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_5> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_5> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_6> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_6> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_7> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_7> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_8> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_8> 
+INFO:Xst:2261 - The FF/Latch <R_Yk_9> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <R_ykd0_9> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_10> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_10> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_11> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_11> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_12> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_12> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_13> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_13> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_14> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_14> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_15> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_15> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_20> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_20> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_16> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_16> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_21> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_21> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_17> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_17> 
+INFO:Xst:2261 - The FF/Latch <L_Yk_22> in Unit <LRBPF> is equivalent to the following FF/Latch, which will be removed : <L_ykd0_22> 
+WARNING:Xst:1710 - FF/Latch <N2_30> (without init value) has a constant value of 0 in block <LRBPF>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <I2Sreceiver>.
+The following registers are absorbed into counter <SCLK_cnt_0>: 1 register on signal <SCLK_cnt_0>.
+The following registers are absorbed into counter <LRCK_cnt>: 1 register on signal <LRCK_cnt>.
+Unit <I2Sreceiver> synthesized (advanced).
+
+Synthesizing (advanced) Unit <I2Stransmitter>.
+The following registers are absorbed into counter <SCLK_cnt_0>: 1 register on signal <SCLK_cnt_0>.
+The following registers are absorbed into counter <LRCK_cnt>: 1 register on signal <LRCK_cnt>.
+Unit <I2Stransmitter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <TopDriver>.
+The following registers are absorbed into counter <BPF_Clk_cnt_0>: 1 register on signal <BPF_Clk_cnt_0>.
+Unit <TopDriver> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 24x24-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 41
+ 10-bit adder                                          : 7
+ 10-bit subtractor                                     : 12
+ 11-bit subtractor                                     : 3
+ 2-bit adder                                           : 1
+ 23-bit adder                                          : 2
+ 24-bit adder                                          : 2
+ 25-bit adder                                          : 2
+ 27-bit subtractor                                     : 2
+ 28-bit addsub                                         : 1
+ 7-bit subtractor                                      : 2
+ 8-bit adder                                           : 2
+ 8-bit subtractor                                      : 1
+ 9-bit adder                                           : 3
+ 9-bit subtractor                                      : 1
+# Counters                                             : 5
+ 1-bit up counter                                      : 3
+ 6-bit up counter                                      : 2
+# Registers                                            : 2003
+ Flip-Flops                                            : 2003
+# Comparators                                          : 130
+ 1-bit comparator greater                              : 3
+ 10-bit comparator greater                             : 36
+ 10-bit comparator lessequal                           : 4
+ 11-bit comparator greater                             : 28
+ 2-bit comparator greater                              : 1
+ 27-bit comparator greater                             : 1
+ 6-bit comparator greater                              : 5
+ 8-bit comparator greater                              : 48
+ 9-bit comparator greater                              : 4
+# Multiplexers                                         : 1538
+ 1-bit 2-to-1 multiplexer                              : 1172
+ 1-bit 27-to-1 multiplexer                             : 2
+ 1-bit 28-to-1 multiplexer                             : 2
+ 10-bit 2-to-1 multiplexer                             : 15
+ 11-bit 2-to-1 multiplexer                             : 3
+ 23-bit 2-to-1 multiplexer                             : 6
+ 24-bit 2-to-1 multiplexer                             : 38
+ 26-bit 2-to-1 multiplexer                             : 8
+ 27-bit 2-to-1 multiplexer                             : 2
+ 28-bit 2-to-1 multiplexer                             : 17
+ 32-bit 2-to-1 multiplexer                             : 93
+ 4-bit 2-to-1 multiplexer                              : 24
+ 5-bit 2-to-1 multiplexer                              : 140
+ 6-bit 2-to-1 multiplexer                              : 6
+ 7-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 4
+ 9-bit 2-to-1 multiplexer                              : 4
+# Logic shifters                                       : 14
+ 24-bit shifter logical left                           : 4
+ 26-bit shifter logical left                           : 2
+ 26-bit shifter logical right                          : 2
+ 28-bit shifter logical left                           : 2
+ 28-bit shifter logical right                          : 4
+# FSMs                                                 : 1
+# Xors                                                 : 6
+ 1-bit xor2                                            : 6
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <N2_30> (without init value) has a constant value of 0 in block <BPF2channels>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <L_ykd0_23> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_23> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_18> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_18> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_24> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_24> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_19> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_19> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_30> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_30> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_25> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_25> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_31> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_31> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_26> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_26> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_27> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_27> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_28> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_28> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_29> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_29> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_0> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_0> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_1> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_1> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_2> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_2> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_3> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_3> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_4> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_4> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_5> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_5> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_6> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_6> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_7> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_7> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_8> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_8> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_9> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_9> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_10> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_10> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_11> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_11> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_12> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_12> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_13> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_13> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_14> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_14> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_15> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_15> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_20> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_20> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_16> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_16> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_21> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_21> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_17> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_17> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_22> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_22> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_18> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_18> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_23> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_23> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_19> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_19> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_24> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_24> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_25> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_25> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_30> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_30> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_26> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_26> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_31> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_31> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_27> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_27> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_28> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_28> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_0> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_0> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_29> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_29> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_1> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_1> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_2> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_2> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_3> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_3> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_4> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_4> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_5> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_5> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_6> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_6> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_7> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_7> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_8> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_8> 
+INFO:Xst:2261 - The FF/Latch <R_ykd0_9> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <R_Yk_9> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_10> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_10> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_11> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_11> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_12> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_12> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_13> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_13> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_14> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_14> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_20> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_20> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_15> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_15> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_21> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_21> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_16> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_16> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_22> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_22> 
+INFO:Xst:2261 - The FF/Latch <L_ykd0_17> in Unit <BPF2channels> is equivalent to the following FF/Latch, which will be removed : <L_Yk_17> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <LRBPF/FSM_0> on signal <T[1:69]> with one-hot encoding.
+--------------------------------------------------------------------------------
+ State | Encoding
+--------------------------------------------------------------------------------
+ ta    | 000000000000000000000000000000000000000000000000000000000000000000001
+ tbl   | 000000000000000000000000000000000000000000000000000000000000000000100
+ tc1l  | 000000000000000000000000000000000000000000000000000000000000000001000
+ tc2l  | 000000000000000000000000000000000000000000000000000000000000000010000
+ tc3l  | 000000000000000000000000000000000000000000000000000000000000000100000
+ tc4l  | 000000000000000000000000000000000000000000000000000000000000001000000
+ td1l  | 000000000000000000000000000000000000000000000000000000000000010000000
+ td2l  | 000000000000000000000000000000000000000000000000000000000000100000000
+ td3l  | 000000000000000000000000000000000000000000000000000000000001000000000
+ td4l  | 000000000000000000000000000000000000000000000000000000000010000000000
+ te1l  | 000000000000000000000000000000000000000000000000000000000100000000000
+ te2l  | 000000000000000000000000000000000000000000000000000000001000000000000
+ te3l  | 000000000000000000000000000000000000000000000000000000010000000000000
+ te4l  | 000000000000000000000000000000000000000000000000000000100000000000000
+ tf1l  | 000000000000000000000000000000000000000000000000000001000000000000000
+ tf2l  | 000000000000000000000000000000000000000000000000000010000000000000000
+ tf3l  | 000000000000000000000000000000000000000000000000000100000000000000000
+ tf4l  | 000000000000000000000000000000000000000000000000001000000000000000000
+ tg1l  | 000000000000000000000000000000000000000000000000010000000000000000000
+ tg2l  | 000000000000000000000000000000000000000000000000100000000000000000000
+ tg3l  | 000000000000000000000000000000000000000000000001000000000000000000000
+ tg4l  | 000000000000000000000000000000000000000000000010000000000000000000000
+ th1l  | 000000000000000000000000000000000000000000000100000000000000000000000
+ th2l  | 000000000000000000000000000000000000000000001000000000000000000000000
+ th3l  | 000000000000000000000000000000000000000000010000000000000000000000000
+ th4l  | 000000000000000000000000000000000000000000100000000000000000000000000
+ ti1l  | 000000000000000000000000000000000000000001000000000000000000000000000
+ ti2l  | 000000000000000000000000000000000000000010000000000000000000000000000
+ ti3l  | 000000000000000000000000000000000000000100000000000000000000000000000
+ ti4l  | 000000000000000000000000000000000000001000000000000000000000000000000
+ tj1l  | 000000000000000000000000000000000000010000000000000000000000000000000
+ tj2l  | 000000000000000000000000000000000000100000000000000000000000000000000
+ tj3l  | 000000000000000000000000000000000001000000000000000000000000000000000
+ tj4l  | 000000000000000000000000000000000010000000000000000000000000000000000
+ tkl   | 000000000000000000000000000000000100000000000000000000000000000000000
+ tbr   | 000000000000000000000000000000000000000000000000000000000000000000010
+ tc1r  | 000000000000000000000000000000001000000000000000000000000000000000000
+ tc2r  | 000000000000000000000000000000010000000000000000000000000000000000000
+ tc3r  | 000000000000000000000000000000100000000000000000000000000000000000000
+ tc4r  | 000000000000000000000000000001000000000000000000000000000000000000000
+ td1r  | 000000000000000000000000000010000000000000000000000000000000000000000
+ td2r  | 000000000000000000000000000100000000000000000000000000000000000000000
+ td3r  | 000000000000000000000000001000000000000000000000000000000000000000000
+ td4r  | 000000000000000000000000010000000000000000000000000000000000000000000
+ te1r  | 000000000000000000000000100000000000000000000000000000000000000000000
+ te2r  | 000000000000000000000001000000000000000000000000000000000000000000000
+ te3r  | 000000000000000000000010000000000000000000000000000000000000000000000
+ te4r  | 000000000000000000000100000000000000000000000000000000000000000000000
+ tf1r  | 000000000000000000001000000000000000000000000000000000000000000000000
+ tf2r  | 000000000000000000010000000000000000000000000000000000000000000000000
+ tf3r  | 000000000000000000100000000000000000000000000000000000000000000000000
+ tf4r  | 000000000000000001000000000000000000000000000000000000000000000000000
+ tg1r  | 000000000000000010000000000000000000000000000000000000000000000000000
+ tg2r  | 000000000000000100000000000000000000000000000000000000000000000000000
+ tg3r  | 000000000000001000000000000000000000000000000000000000000000000000000
+ tg4r  | 000000000000010000000000000000000000000000000000000000000000000000000
+ th1r  | 000000000000100000000000000000000000000000000000000000000000000000000
+ th2r  | 000000000001000000000000000000000000000000000000000000000000000000000
+ th3r  | 000000000010000000000000000000000000000000000000000000000000000000000
+ th4r  | 000000000100000000000000000000000000000000000000000000000000000000000
+ ti1r  | 000000001000000000000000000000000000000000000000000000000000000000000
+ ti2r  | 000000010000000000000000000000000000000000000000000000000000000000000
+ ti3r  | 000000100000000000000000000000000000000000000000000000000000000000000
+ ti4r  | 000001000000000000000000000000000000000000000000000000000000000000000
+ tj1r  | 000010000000000000000000000000000000000000000000000000000000000000000
+ tj2r  | 000100000000000000000000000000000000000000000000000000000000000000000
+ tj3r  | 001000000000000000000000000000000000000000000000000000000000000000000
+ tj4r  | 010000000000000000000000000000000000000000000000000000000000000000000
+ tkr   | 100000000000000000000000000000000000000000000000000000000000000000000
+--------------------------------------------------------------------------------
+WARNING:Xst:1710 - FF/Latch <N2_24> (without init value) has a constant value of 1 in block <BPF2channels>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <N2_26> (without init value) has a constant value of 1 in block <BPF2channels>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <N2_27> (without init value) has a constant value of 1 in block <BPF2channels>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <N2_28> (without init value) has a constant value of 1 in block <BPF2channels>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <N2_29> (without init value) has a constant value of 1 in block <BPF2channels>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <TopDriver> ...
+
+Optimizing unit <I2Sreceiver> ...
+
+Optimizing unit <I2Stransmitter> ...
+
+Optimizing unit <BPF2channels> ...
+
+Optimizing unit <SingleAddProduct> ...
+
+Optimizing unit <Fixed2Float> ...
+
+Optimizing unit <Float2Fixed> ...
+WARNING:Xst:2677 - Node <I2SDAC/Ldone> of sequential type is unconnected in block <TopDriver>.
+WARNING:Xst:2677 - Node <I2SDAC/Rdone> of sequential type is unconnected in block <TopDriver>.
+WARNING:Xst:1293 - FF/Latch <LRBPF/R_rkd0_0> has a constant value of 0 in block <TopDriver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <LRBPF/L_rkd0_0> has a constant value of 0 in block <TopDriver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <LRBPF/R_rkd1_0> has a constant value of 0 in block <TopDriver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <LRBPF/L_rkd1_0> has a constant value of 0 in block <TopDriver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <LRBPF/R_rkd2_0> has a constant value of 0 in block <TopDriver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <LRBPF/L_rkd2_0> has a constant value of 0 in block <TopDriver>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <LRBPF/R_rkd1_29> in Unit <TopDriver> is equivalent to the following FF/Latch, which will be removed : <LRBPF/R_rkd1_28> 
+INFO:Xst:2261 - The FF/Latch <LRBPF/L_rkd1_29> in Unit <TopDriver> is equivalent to the following FF/Latch, which will be removed : <LRBPF/L_rkd1_28> 
+INFO:Xst:2261 - The FF/Latch <LRBPF/R_rkd0_29> in Unit <TopDriver> is equivalent to the following FF/Latch, which will be removed : <LRBPF/R_rkd0_28> 
+INFO:Xst:2261 - The FF/Latch <LRBPF/L_rkd0_29> in Unit <TopDriver> is equivalent to the following FF/Latch, which will be removed : <LRBPF/L_rkd0_28> 
+INFO:Xst:2261 - The FF/Latch <LRBPF/R_rkd2_29> in Unit <TopDriver> is equivalent to the following FF/Latch, which will be removed : <LRBPF/R_rkd2_28> 
+INFO:Xst:2261 - The FF/Latch <LRBPF/L_rkd2_29> in Unit <TopDriver> is equivalent to the following FF/Latch, which will be removed : <LRBPF/L_rkd2_28> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TopDriver, actual ratio is 81.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1980
+ Flip-Flops                                            : 1980
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : TopDriver.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 3945
+#      GND                         : 1
+#      INV                         : 57
+#      LUT1                        : 2
+#      LUT2                        : 134
+#      LUT3                        : 303
+#      LUT4                        : 238
+#      LUT5                        : 541
+#      LUT6                        : 2080
+#      MUXCY                       : 265
+#      MUXF7                       : 58
+#      VCC                         : 1
+#      XORCY                       : 265
+# FlipFlops/Latches                : 1980
+#      FD                          : 4
+#      FDC                         : 80
+#      FDCE                        : 1826
+#      FDE                         : 69
+#      FDP                         : 1
+# Clock Buffers                    : 4
+#      BUFG                        : 3
+#      BUFGP                       : 1
+# IO Buffers                       : 9
+#      IBUF                        : 2
+#      OBUF                        : 7
+# DSPs                             : 4
+#      DSP48A1                     : 4
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1980  out of  11440    17%  
+ Number of Slice LUTs:                 3355  out of   5720    58%  
+    Number used as Logic:              3355  out of   5720    58%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   4821
+   Number with an unused Flip Flop:    2841  out of   4821    58%  
+   Number with an unused LUT:          1466  out of   4821    30%  
+   Number of fully used LUT-FF pairs:   514  out of   4821    10%  
+   Number of unique control sets:        31
+
+IO Utilization: 
+ Number of IOs:                          10
+ Number of bonded IOBs:                  10  out of    102     9%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                4  out of     16    25%  
+ Number of DSP48A1s:                      4  out of     16    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk                                | BUFGP                  | 9     |
+ADC_MCLK_int                       | BUFG                   | 83    |
+DAC_MCLK_int                       | BUFG                   | 34    |
+BPF_Clk                            | BUFG                   | 1858  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 77.618ns (Maximum Frequency: 12.884MHz)
+   Minimum input arrival time before clock: 5.803ns
+   Maximum output required time after clock: 4.906ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 2.751ns (frequency: 363.504MHz)
+  Total number of paths / destination ports: 19 / 11
+-------------------------------------------------------------------------
+Delay:               2.751ns (Levels of Logic = 1)
+  Source:            BPF_L_S_aux (FF)
+  Destination:       BPF_Start_cnt_0 (FF)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: BPF_L_S_aux to BPF_Start_cnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               5   0.525   0.949  BPF_L_S_aux (BPF_L_S_aux)
+     LUT3:I1->O            2   0.250   0.725  _n0077_inv1 (_n0077_inv)
+     FDE:CE                    0.302          BPF_Start_cnt_0
+    ----------------------------------------
+    Total                      2.751ns (1.077ns logic, 1.674ns route)
+                                       (39.1% logic, 60.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ADC_MCLK_int'
+  Clock period: 5.423ns (frequency: 184.400MHz)
+  Total number of paths / destination ports: 967 / 162
+-------------------------------------------------------------------------
+Delay:               5.423ns (Levels of Logic = 2)
+  Source:            I2SADC/LRCK_cnt_4 (FF)
+  Destination:       I2SADC/DATA_int_23 (FF)
+  Source Clock:      ADC_MCLK_int rising
+  Destination Clock: ADC_MCLK_int rising
+
+  Data Path: I2SADC/LRCK_cnt_4 to I2SADC/DATA_int_23
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             6   0.525   1.306  I2SADC/LRCK_cnt_4 (I2SADC/LRCK_cnt_4)
+     LUT5:I0->O           25   0.254   1.403  I2SADC/Mmux_DATA_int[23]_DATA_int[22]_mux_10_OUT1101 (I2SADC/Mmux_DATA_int[23]_DATA_int[22]_mux_10_OUT110)
+     LUT4:I3->O           24   0.254   1.379  I2SADC/_n0123_inv1 (I2SADC/_n0123_inv)
+     FDCE:CE                   0.302          I2SADC/DATA_int_0
+    ----------------------------------------
+    Total                      5.423ns (1.335ns logic, 4.088ns route)
+                                       (24.6% logic, 75.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'DAC_MCLK_int'
+  Clock period: 5.430ns (frequency: 184.172MHz)
+  Total number of paths / destination ports: 575 / 65
+-------------------------------------------------------------------------
+Delay:               5.430ns (Levels of Logic = 2)
+  Source:            I2SDAC/LRCK_cnt_3 (FF)
+  Destination:       I2SDAC/DATA_int_23 (FF)
+  Source Clock:      DAC_MCLK_int rising
+  Destination Clock: DAC_MCLK_int rising
+
+  Data Path: I2SDAC/LRCK_cnt_3 to I2SDAC/DATA_int_23
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             5   0.525   1.296  I2SDAC/LRCK_cnt_3 (I2SDAC/LRCK_cnt_3)
+     LUT6:I0->O           26   0.254   1.420  I2SDAC/Mmux_R_DATA[23]_DATA_int[23]_mux_9_OUT1011 (I2SDAC/Mmux_R_DATA[23]_DATA_int[23]_mux_9_OUT101)
+     LUT4:I3->O           24   0.254   1.379  I2SDAC/_n0079_inv1 (I2SDAC/_n0079_inv)
+     FDCE:CE                   0.302          I2SDAC/DATA_int_0
+    ----------------------------------------
+    Total                      5.430ns (1.335ns logic, 4.095ns route)
+                                       (24.6% logic, 75.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'BPF_Clk'
+  Clock period: 77.618ns (frequency: 12.884MHz)
+  Total number of paths / destination ports: 4931101580513966935573465661440 / 3627
+-------------------------------------------------------------------------
+Delay:               77.618ns (Levels of Logic = 66)
+  Source:            LRBPF/N3_25 (FF)
+  Destination:       LRBPF/N3_30 (FF)
+  Source Clock:      BPF_Clk rising
+  Destination Clock: BPF_Clk rising
+
+  Data Path: LRBPF/N3_25 to LRBPF/N3_30
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.525   1.032  LRBPF/N3_25 (LRBPF/N3_25)
+     LUT3:I0->O            5   0.235   0.841  LRBPF/SingleCalc/N3fp[6]_INV_84_o_SW0 (N164)
+     LUT6:I5->O            1   0.254   0.682  LRBPF/SingleCalc/N3fp[6]_INV_84_o_1 (LRBPF/SingleCalc/N3fp[6]_INV_84_o1)
+     LUT6:I5->O           29   0.254   1.470  LRBPF/SingleCalc/GND_15_o_N3fp[-23]_OR_359_o (LRBPF/SingleCalc/Msub_GND_15_o_PWR_15_o_sub_102_OUT_cy<4>)
+     LUT6:I5->O           34   0.254   1.553  LRBPF/SingleCalc/Mmux_PWR_15_o_GND_15_o_mux_100_OUT15 (LRBPF/SingleCalc/PWR_15_o_GND_15_o_mux_100_OUT<0>)
+     LUT6:I5->O            3   0.254   1.042  LRBPF/SingleCalc/Sh871 (LRBPF/SingleCalc/Sh87)
+     LUT6:I2->O            1   0.254   0.682  LRBPF/SingleCalc/Mmux_GND_15_o_GND_15_o_mux_133_OUT71 (LRBPF/SingleCalc/Mmux_GND_15_o_GND_15_o_mux_133_OUT7)
+     LUT5:I4->O            1   0.254   0.681  LRBPF/SingleCalc/Mmux_GND_15_o_GND_15_o_mux_133_OUT72 (LRBPF/SingleCalc/GND_15_o_GND_15_o_mux_133_OUT<15>)
+     DSP48A1:B15->P47     18   5.145   1.234  LRBPF/SingleCalc/Mmult_GND_15_o_GND_15_o_MuLt_139_OUT (LRBPF/SingleCalc/Mmult_GND_15_o_GND_15_o_MuLt_139_OUT_P47_to_Mmult_GND_15_o_GND_15_o_MuLt_139_OUT1)
+     DSP48A1:C30->PCOUT47    1   3.149   0.000  LRBPF/SingleCalc/Mmult_GND_15_o_GND_15_o_MuLt_139_OUT1 (LRBPF/SingleCalc/Mmult_GND_15_o_GND_15_o_MuLt_139_OUT1_PCOUT_to_Mmult_GND_15_o_GND_15_o_MuLt_139_OUT2_PCIN_47)
+     DSP48A1:PCIN47->P47   18   2.645   1.234  LRBPF/SingleCalc/Mmult_GND_15_o_GND_15_o_MuLt_139_OUT2 (LRBPF/SingleCalc/Mmult_GND_15_o_GND_15_o_MuLt_139_OUT2_P47_to_Mmult_GND_15_o_GND_15_o_MuLt_139_OUT3)
+     DSP48A1:C30->P13     18   3.141   1.511  LRBPF/SingleCalc/Mmult_GND_15_o_GND_15_o_MuLt_139_OUT3 (LRBPF/SingleCalc/GND_15_o_GND_15_o_MuLt_139_OUT<47>)
+     LUT4:I0->O           11   0.254   1.039  LRBPF/SingleCalc/GND_15_o_GND_15_o_OR_406_o1 (LRBPF/SingleCalc/GND_15_o_GND_15_o_OR_409_o_mmx_out)
+     LUT5:I4->O            3   0.254   0.766  LRBPF/SingleCalc/GND_15_o_GND_15_o_OR_410_o1 (LRBPF/SingleCalc/GND_15_o_GND_15_o_OR_410_o)
+     LUT6:I5->O            3   0.254   0.766  LRBPF/SingleCalc/Mmux_PWR_15_o_GND_15_o_mux_167_OUT121_1 (LRBPF/SingleCalc/Mmux_PWR_15_o_GND_15_o_mux_167_OUT121)
+     LUT6:I5->O            2   0.254   0.726  LRBPF/SingleCalc/Mmux_PWR_15_o_GND_15_o_mux_167_OUT24_1 (LRBPF/SingleCalc/Mmux_PWR_15_o_GND_15_o_mux_167_OUT24)
+     LUT6:I5->O            1   0.254   0.000  LRBPF/SingleCalc/Madd_GND_15_o_PWR_15_o_add_170_OUT_lut<4> (LRBPF/SingleCalc/Madd_GND_15_o_PWR_15_o_add_170_OUT_lut<4>)
+     MUXCY:S->O            1   0.215   0.000  LRBPF/SingleCalc/Madd_GND_15_o_PWR_15_o_add_170_OUT_cy<4> (LRBPF/SingleCalc/Madd_GND_15_o_PWR_15_o_add_170_OUT_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  LRBPF/SingleCalc/Madd_GND_15_o_PWR_15_o_add_170_OUT_cy<5> (LRBPF/SingleCalc/Madd_GND_15_o_PWR_15_o_add_170_OUT_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  LRBPF/SingleCalc/Madd_GND_15_o_PWR_15_o_add_170_OUT_cy<6> (LRBPF/SingleCalc/Madd_GND_15_o_PWR_15_o_add_170_OUT_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  LRBPF/SingleCalc/Madd_GND_15_o_PWR_15_o_add_170_OUT_cy<7> (LRBPF/SingleCalc/Madd_GND_15_o_PWR_15_o_add_170_OUT_cy<7>)
+     MUXCY:CI->O           0   0.023   0.000  LRBPF/SingleCalc/Madd_GND_15_o_PWR_15_o_add_170_OUT_cy<8> (LRBPF/SingleCalc/Madd_GND_15_o_PWR_15_o_add_170_OUT_cy<8>)
+     XORCY:CI->O          49   0.206   1.804  LRBPF/SingleCalc/Madd_GND_15_o_PWR_15_o_add_170_OUT_xor<9> (LRBPF/SingleCalc/GND_15_o_PWR_15_o_add_170_OUT<9>)
+     LUT6:I5->O            2   0.254   0.726  LRBPF/SingleCalc/GND_15_o_INV_107_o1_1 (LRBPF/SingleCalc/GND_15_o_INV_107_o1)
+     LUT4:I3->O           55   0.254   1.860  LRBPF/SingleCalc/Mmux_PWR_15_o_PWR_15_o_mux_182_OUT121 (LRBPF/SingleCalc/Mmux_PWR_15_o_PWR_15_o_mux_182_OUT12)
+     LUT6:I5->O            9   0.254   1.204  LRBPF/SingleCalc/Mmux_PWR_15_o_PWR_15_o_mux_182_OUT10 (LRBPF/SingleCalc/PWR_15_o_PWR_15_o_mux_182_OUT<8>)
+     LUT6:I3->O            5   0.235   0.841  LRBPF/SingleCalc/out43 (LRBPF/SingleCalc/out42)
+     LUT6:I5->O           28   0.254   1.453  LRBPF/SingleCalc/out45 (LRBPF/SingleCalc/_n1628)
+     LUT6:I5->O            3   0.254   1.196  LRBPF/SingleCalc/Mmux_n1217174 (LRBPF/SingleCalc/n1217<24>)
+     LUT6:I1->O            2   0.254   0.834  LRBPF/SingleCalc/GND_15_o_GND_15_o_AND_633_o<10>7_SW0 (N231)
+     LUT6:I4->O            5   0.250   0.841  LRBPF/SingleCalc/GND_15_o_GND_15_o_AND_633_o<10>7_1 (LRBPF/SingleCalc/GND_15_o_GND_15_o_AND_633_o<10>7)
+     LUT6:I5->O            6   0.254   1.306  LRBPF/SingleCalc/Mmux_N2fp[8]_GND_15_o_mux_233_OUT212 (LRBPF/SingleCalc/N2fp[8]_GND_15_o_mux_233_OUT<28>)
+     LUT5:I0->O            1   0.254   0.682  LRBPF/SingleCalc/Msub_n1251_Madd_lut<0>_SW0 (N1141)
+     LUT6:I5->O            1   0.254   0.000  LRBPF/SingleCalc/Msub_n1251_Madd_lut<0> (LRBPF/SingleCalc/Msub_n1251_Madd_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  LRBPF/SingleCalc/Msub_n1251_Madd_cy<0> (LRBPF/SingleCalc/Msub_n1251_Madd_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  LRBPF/SingleCalc/Msub_n1251_Madd_cy<1> (LRBPF/SingleCalc/Msub_n1251_Madd_cy<1>)
+     XORCY:CI->O         103   0.206   2.446  LRBPF/SingleCalc/Msub_n1251_Madd_xor<2> (LRBPF/SingleCalc/n1251<2>1)
+     LUT4:I1->O           10   0.235   1.008  LRBPF/SingleCalc/GND_15_o_GND_15_o_equal_388_o<8>_SW0 (N162)
+     LUT6:I5->O            1   0.254   0.682  LRBPF/SingleCalc/X_14_o_GND_15_o_OR_873_o9_SW0_SW0 (N1195)
+     LUT6:I5->O            2   0.254   0.726  LRBPF/SingleCalc/X_14_o_GND_15_o_OR_873_o9_SW0 (N233)
+     LUT6:I5->O            1   0.254   0.958  LRBPF/SingleCalc/Mmux_GND_15_o_N1fp[-1]_MUX_1509_o250_SW1 (N981)
+     LUT6:I2->O            1   0.254   0.000  LRBPF/SingleCalc/Maddsub_GND_15_o_X_14_o_mux_442_OUT_lut<0> (LRBPF/SingleCalc/Maddsub_GND_15_o_X_14_o_mux_442_OUT_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  LRBPF/SingleCalc/Maddsub_GND_15_o_X_14_o_mux_442_OUT_cy<0> (LRBPF/SingleCalc/Maddsub_GND_15_o_X_14_o_mux_442_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  LRBPF/SingleCalc/Maddsub_GND_15_o_X_14_o_mux_442_OUT_cy<1> (LRBPF/SingleCalc/Maddsub_GND_15_o_X_14_o_mux_442_OUT_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  LRBPF/SingleCalc/Maddsub_GND_15_o_X_14_o_mux_442_OUT_cy<2> (LRBPF/SingleCalc/Maddsub_GND_15_o_X_14_o_mux_442_OUT_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  LRBPF/SingleCalc/Maddsub_GND_15_o_X_14_o_mux_442_OUT_cy<3> (LRBPF/SingleCalc/Maddsub_GND_15_o_X_14_o_mux_442_OUT_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  LRBPF/SingleCalc/Maddsub_GND_15_o_X_14_o_mux_442_OUT_cy<4> (LRBPF/SingleCalc/Maddsub_GND_15_o_X_14_o_mux_442_OUT_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  LRBPF/SingleCalc/Maddsub_GND_15_o_X_14_o_mux_442_OUT_cy<5> (LRBPF/SingleCalc/Maddsub_GND_15_o_X_14_o_mux_442_OUT_cy<5>)
+     XORCY:CI->O          20   0.206   1.741  LRBPF/SingleCalc/Maddsub_GND_15_o_X_14_o_mux_442_OUT_xor<6> (LRBPF/SingleCalc/GND_15_o_X_14_o_mux_442_OUT<6>)
+     LUT6:I0->O            2   0.254   0.726  LRBPF/SingleCalc/GND_15_o_GND_15_o_OR_927_o1 (LRBPF/SingleCalc/GND_15_o_GND_15_o_OR_927_o)
+     LUT6:I5->O            8   0.254   0.944  LRBPF/SingleCalc/GND_15_o_GND_15_o_OR_927_o3 (LRBPF/SingleCalc/GND_15_o_GND_15_o_OR_927_o2)
+     LUT6:I5->O           25   0.254   1.403  LRBPF/SingleCalc/Mmux_PWR_15_o_GND_15_o_mux_470_OUT34 (LRBPF/SingleCalc/PWR_15_o_GND_15_o_mux_470_OUT<2>)
+     LUT6:I5->O            4   0.254   0.804  LRBPF/SingleCalc/Mmux_PWR_15_o_GND_15_o_mux_470_OUT25_SW3_SW0 (N926)
+     LUT6:I5->O            1   0.254   0.000  LRBPF/SingleCalc/Madd_X_14_o_PWR_15_o_add_473_OUT_lut<6> (LRBPF/SingleCalc/Madd_X_14_o_PWR_15_o_add_473_OUT_lut<6>)
+     MUXCY:S->O            1   0.215   0.000  LRBPF/SingleCalc/Madd_X_14_o_PWR_15_o_add_473_OUT_cy<6> (LRBPF/SingleCalc/Madd_X_14_o_PWR_15_o_add_473_OUT_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  LRBPF/SingleCalc/Madd_X_14_o_PWR_15_o_add_473_OUT_cy<7> (LRBPF/SingleCalc/Madd_X_14_o_PWR_15_o_add_473_OUT_cy<7>)
+     MUXCY:CI->O           0   0.023   0.000  LRBPF/SingleCalc/Madd_X_14_o_PWR_15_o_add_473_OUT_cy<8> (LRBPF/SingleCalc/Madd_X_14_o_PWR_15_o_add_473_OUT_cy<8>)
+     XORCY:CI->O          43   0.206   1.704  LRBPF/SingleCalc/Madd_X_14_o_PWR_15_o_add_473_OUT_xor<9> (LRBPF/SingleCalc/X_14_o_PWR_15_o_add_473_OUT<9>)
+     LUT6:I5->O            3   0.254   0.766  LRBPF/SingleCalc/X_14_o_INV_200_o1_1 (LRBPF/SingleCalc/X_14_o_INV_200_o1)
+     LUT6:I5->O           77   0.254   2.139  LRBPF/SingleCalc/Mmux_PWR_15_o_PWR_15_o_mux_485_OUT21 (LRBPF/SingleCalc/PWR_15_o_PWR_15_o_mux_485_OUT<1>1)
+     LUT6:I4->O            1   0.250   0.790  LRBPF/SingleCalc/Mmux_n1314172 (LRBPF/SingleCalc/Mmux_n1314171)
+     LUT6:I4->O            1   0.250   0.910  LRBPF/SingleCalc/Mmux_n1314173 (LRBPF/SingleCalc/Mmux_n1314172)
+     LUT6:I3->O            2   0.235   0.726  LRBPF/SingleCalc/Mmux_n1314174 (LRBPF/SingleCalc/Mmux_n1314173)
+     LUT4:I3->O            4   0.254   1.080  LRBPF/SingleCalc/Mmux_n1314175 (LRBPF/SingleCalc/n1314<24>)
+     LUT6:I2->O            1   0.254   0.682  LRBPF/SingleCalc/GND_15_o_GND_15_o_AND_686_o<10>4_SW0 (N1203)
+     LUT6:I5->O           93   0.254   2.155  LRBPF/SingleCalc/GND_15_o_GND_15_o_AND_686_o<10>5 (LRBPF/SingleCalc/GND_15_o_GND_15_o_AND_686_o)
+     LUT6:I5->O            1   0.254   0.000  LRBPF/T_T[6]_X_13_o_wide_mux_22_OUT<22>1 (LRBPF/T[6]_X_13_o_wide_mux_22_OUT<22>)
+     FDE:D                     0.074          LRBPF/N1_22
+    ----------------------------------------
+    Total                     77.618ns (27.222ns logic, 50.396ns route)
+                                       (35.1% logic, 64.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              5.803ns (Levels of Logic = 2)
+  Source:            Reset_N (PAD)
+  Destination:       ADC_MCLK_int (FF)
+  Destination Clock: Clk rising
+
+  Data Path: Reset_N to ADC_MCLK_int
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   1.328   0.909  Reset_N_IBUF (Reset_N_IBUF)
+     INV:I->O           1907   0.255   2.852  Reset_N_inv1_INV_0 (I2SADC/Reset_N_inv)
+     FDC:CLR                   0.459          ADC_MCLK_int
+    ----------------------------------------
+    Total                      5.803ns (2.042ns logic, 3.761ns route)
+                                       (35.2% logic, 64.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ADC_MCLK_int'
+  Total number of paths / destination ports: 84 / 84
+-------------------------------------------------------------------------
+Offset:              5.803ns (Levels of Logic = 2)
+  Source:            Reset_N (PAD)
+  Destination:       I2SADC/SCLK_cnt_0 (FF)
+  Destination Clock: ADC_MCLK_int rising
+
+  Data Path: Reset_N to I2SADC/SCLK_cnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   1.328   0.909  Reset_N_IBUF (Reset_N_IBUF)
+     INV:I->O           1907   0.255   2.852  Reset_N_inv1_INV_0 (I2SADC/Reset_N_inv)
+     FDC:CLR                   0.459          I2SADC/Rdone
+    ----------------------------------------
+    Total                      5.803ns (2.042ns logic, 3.761ns route)
+                                       (35.2% logic, 64.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'DAC_MCLK_int'
+  Total number of paths / destination ports: 34 / 34
+-------------------------------------------------------------------------
+Offset:              5.803ns (Levels of Logic = 2)
+  Source:            Reset_N (PAD)
+  Destination:       I2SDAC/SCLK_cnt_0 (FF)
+  Destination Clock: DAC_MCLK_int rising
+
+  Data Path: Reset_N to I2SDAC/SCLK_cnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   1.328   0.909  Reset_N_IBUF (Reset_N_IBUF)
+     INV:I->O           1907   0.255   2.852  Reset_N_inv1_INV_0 (I2SADC/Reset_N_inv)
+     FDCE:CLR                  0.459          I2SDAC/DATA_int_0
+    ----------------------------------------
+    Total                      5.803ns (2.042ns logic, 3.761ns route)
+                                       (35.2% logic, 64.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'BPF_Clk'
+  Total number of paths / destination ports: 1858 / 1858
+-------------------------------------------------------------------------
+Offset:              5.803ns (Levels of Logic = 2)
+  Source:            Reset_N (PAD)
+  Destination:       LRBPF/T_FSM_FFd1 (FF)
+  Destination Clock: BPF_Clk rising
+
+  Data Path: Reset_N to LRBPF/T_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   1.328   0.909  Reset_N_IBUF (Reset_N_IBUF)
+     INV:I->O           1907   0.255   2.852  Reset_N_inv1_INV_0 (I2SADC/Reset_N_inv)
+     FDCE:CLR                  0.459          LRBPF/L_rkd0_1
+    ----------------------------------------
+    Total                      5.803ns (2.042ns logic, 3.761ns route)
+                                       (35.2% logic, 64.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              4.162ns (Levels of Logic = 1)
+  Source:            ADC_MCLK_int (FF)
+  Destination:       ADC_MCLK (PAD)
+  Source Clock:      Clk rising
+
+  Data Path: ADC_MCLK_int to ADC_MCLK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.525   0.725  ADC_MCLK_int (ADC_MCLK_int)
+     OBUF:I->O                 2.912          ADC_MCLK_OBUF (ADC_MCLK)
+    ----------------------------------------
+    Total                      4.162ns (3.437ns logic, 0.725ns route)
+                                       (82.6% logic, 17.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ADC_MCLK_int'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              4.906ns (Levels of Logic = 1)
+  Source:            I2SADC/SCLK_int (FF)
+  Destination:       ADC_SCLK (PAD)
+  Source Clock:      ADC_MCLK_int rising
+
+  Data Path: I2SADC/SCLK_int to ADC_SCLK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            29   0.525   1.469  I2SADC/SCLK_int (I2SADC/SCLK_int)
+     OBUF:I->O                 2.912          ADC_SCLK_OBUF (ADC_SCLK)
+    ----------------------------------------
+    Total                      4.906ns (3.437ns logic, 1.469ns route)
+                                       (70.1% logic, 29.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'DAC_MCLK_int'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              4.856ns (Levels of Logic = 1)
+  Source:            I2SDAC/LRCK_int (FF)
+  Destination:       DAC_LRCK (PAD)
+  Source Clock:      DAC_MCLK_int rising
+
+  Data Path: I2SDAC/LRCK_int to DAC_LRCK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             26   0.525   1.419  I2SDAC/LRCK_int (I2SDAC/LRCK_int)
+     OBUF:I->O                 2.912          DAC_LRCK_OBUF (DAC_LRCK)
+    ----------------------------------------
+    Total                      4.856ns (3.437ns logic, 1.419ns route)
+                                       (70.8% logic, 29.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock ADC_MCLK_int
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+ADC_MCLK_int   |    5.423|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock BPF_Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+ADC_MCLK_int   |   18.448|         |         |         |
+BPF_Clk        |   77.618|         |         |         |
+Clk            |    2.906|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+ADC_MCLK_int   |    1.657|         |         |         |
+BPF_Clk        |    1.744|         |         |         |
+Clk            |    2.751|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock DAC_MCLK_int
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+BPF_Clk        |   28.570|         |         |         |
+DAC_MCLK_int   |    5.430|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 66.00 secs
+Total CPU time to Xst completion: 65.75 secs
+ 
+--> 
+
+
+Total memory usage is 465956 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   21 (   0 filtered)
+Number of infos    :  136 (   0 filtered)
+

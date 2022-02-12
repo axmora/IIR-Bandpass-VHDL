@@ -1,0 +1,8 @@
+vhdl isim_temp "SingleAddProduct.vhd"
+vhdl isim_temp "I2Stransmitter.vhd"
+vhdl isim_temp "I2Sreceiver.vhd"
+vhdl isim_temp "Float2Fixed.vhd"
+vhdl isim_temp "Fixed2Float.vhd"
+vhdl isim_temp "BPF2channels.vhd"
+vhdl isim_temp "TopDriver.vhd"
+vhdl isim_temp "I2Sdtb.vhd"
