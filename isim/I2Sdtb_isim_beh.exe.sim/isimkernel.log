@@ -1,0 +1,28 @@
+Command line:
+   I2Sdtb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49201
+
+Fri Feb 11 06:45:12 2022
+
+
+ Elaboration Time: 0.04 sec
+
+ Current Memory Usage: 187.998 Meg
+
+ Total Signals          : 170
+ Total Nets             : 2554
+ Total Signal Drivers   : 119
+ Total Blocks           : 17
+ Total Primitive Blocks : 14
+ Total Processes        : 32
+ Total Traceable Variables  : 126
+ Total Scalar Nets and Variables : 5494
+
+ Total Simulation Time: 0.99 sec
+
+ Current Memory Usage: 263.5 Meg
+
+Fri Feb 11 07:29:51 2022
+
